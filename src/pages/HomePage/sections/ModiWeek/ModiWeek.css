@@ -1,0 +1,22 @@
+.modiweek{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modiweek__title{
+    width: 1224px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.modiweek__cards{
+    width: 1224px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;;
+}

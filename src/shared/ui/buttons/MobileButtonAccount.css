@@ -1,0 +1,13 @@
+.mobile__button{
+    border: 1px solid var(--primary-primary-600);
+    padding: 16px;
+    width: 152px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--primary-primary-600);
+}

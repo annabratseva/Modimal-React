@@ -1,0 +1,36 @@
+import WhiteButton from "../../shared/ui/buttons/WhiteButton"
+import "./HomePage.css"
+import { Link } from "react-router"
+import FollowBanner from "./sections/FollowUs/FollowUs"
+import SustainBanner from "./sections/BannerStability/Banner"
+import Collections from "./sections/Collections/Collections"
+import ModiWeek from "./sections/ModiWeek/ModiWeek"
+
+
+const HomePage = () => {
+    return (
+        <>
+            <section className="hero-block">
+                <div className="hero-block__container">
+                    <h1 className="hero-block__title">
+                        Elegance in simplicity, <br /> Earth’s harmony
+                    </h1>
+
+                    <WhiteButton linktext={"/new-in"} text={"New In"}></WhiteButton>
+                </div>
+            </section>
+
+            <Collections />
+
+            <ModiWeek />
+
+            <SustainBanner />
+
+            <FollowBanner />
+
+            
+        </>
+    )
+}
+
+export default HomePage

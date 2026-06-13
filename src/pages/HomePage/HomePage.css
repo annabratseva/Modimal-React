@@ -1,0 +1,54 @@
+.hero-block{
+    width: 100%;
+    background-image: url("../../assets/images/HomeBanner.jpg");
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    
+}
+
+.hero-block__button{
+    padding: 16px;
+    width: 184px;
+    height: 40px;
+    background-color: var(--white);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-block__title{
+    font-family: var(--third-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 180%;
+    text-transform: capitalize;
+    color: var(--black);
+    width: 355px;
+}
+
+.hero-block__container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 250px;
+    padding-bottom: 120px;
+    
+    gap: 35px;
+}
+
+.hero-block__link{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--black);
+    text-decoration: none;
+}

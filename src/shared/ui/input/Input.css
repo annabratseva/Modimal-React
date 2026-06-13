@@ -1,0 +1,12 @@
+.form__input{
+    border: 1px solid var(--neutral-gray606060);
+    padding: 0px 16px;
+    width: 392px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 180%;
+    text-transform: capitalize;
+    color: var(--neutral-gray606060);
+}

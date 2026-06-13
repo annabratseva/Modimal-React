@@ -1,0 +1,19 @@
+.form__button{
+    padding: 16px;
+    width: 392px;
+    height: 40px;
+    background: var(--primary-primary-600);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--white);
+    margin-top: 16px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

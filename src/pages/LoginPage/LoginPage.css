@@ -1,0 +1,73 @@
+.form__forgot{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+    color: var(--primary);
+}
+
+.form__link{
+    color: var(--primary);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.form__text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--black);
+}
+
+
+.form__icons{
+    width: 139px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+}
+
+.form__buttons{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form__content{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+    width: fit-content;
+    flex-direction: column;
+}
+
+.form__error{
+    color: var(--state-color-error);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+}
+
+.form__icon{
+    cursor: pointer;
+}

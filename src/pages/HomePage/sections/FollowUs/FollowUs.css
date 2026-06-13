@@ -1,0 +1,8 @@
+.follow-us{
+    width: 1224px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 48px;
+}

@@ -1,0 +1,24 @@
+.smaller{
+    font-size: 16px;
+}
+
+.form__span2{
+    padding-left: 10px;
+}
+
+.smaller2{
+    font-size: 14px;
+}
+
+.form__span-new{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--primary);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 180%;
+    text-transform: capitalize;
+    text-align: center;
+    
+}
