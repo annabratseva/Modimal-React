@@ -6,3 +6,58 @@
     align-items: start;
     margin-bottom: 48px;
 }
+
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 1300px) {
+    .follow-us{
+        width: 800px;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .follow-us__img{
+        width: 800px;
+    }
+
+    .titleHome{
+        font-size: 26px;
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    .follow-us, .follow-us__img{
+        width: 600px;
+    }
+
+    .titleHome{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .follow-us, .follow-us__img{
+        width: 400px;
+    }
+
+    .follow-us__img{
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+    }
+
+    .titleHome{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .follow-us, .follow-us__img{
+        width: 330px;
+    }
+}

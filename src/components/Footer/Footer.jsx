@@ -101,6 +101,13 @@ const Footer = () => {
 
             <div className="footer__bottom">
 
+                <div className="footer__icons mobile">
+                        <InstaIcon className="footer__icon"/>
+                        <FacebookIcon className="footer__icon"/>
+                        <PinterestIcon className="footer__icon"/>
+                        <TiktokIcon className="footer__icon"/>
+                </div>
+
                 <div className="footer__bottom-inner">
 
                     <RightsIcon />
