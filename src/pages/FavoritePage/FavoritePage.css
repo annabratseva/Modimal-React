@@ -1,0 +1,38 @@
+.wish-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    gap: 16px;
+}
+
+.wish-list__title{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    text-transform: capitalize;
+    color: var(--black);
+}
+
+.wish-list__items{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+    color: var(--black);
+}
+
+.wish-list__content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    height: 600px;
+}

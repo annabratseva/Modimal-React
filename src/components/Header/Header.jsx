@@ -52,7 +52,7 @@ const Header = () => {
                         <AccountIcon />
                     </Link>
 
-                    <Link to={"/"}>
+                    <Link to={"/favorite"}>
                         <FavoriteIcon />
                     </Link>
 

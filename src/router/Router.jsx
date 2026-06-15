@@ -10,6 +10,7 @@ import SustainPage from "../pages/SustainabilityPage/SustainabilityPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import LoginLayout from "../layouts/LoginLayout";
+import FavoritePage from "../pages/FavoritePage/FavoritePage";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
             {
                 path: "sustainability",
                 element: <SustainPage />
+            },
+            {
+                path: "favorite",
+                element: <FavoritePage />
             },
             {
                 path: "account",
