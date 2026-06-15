@@ -5,6 +5,7 @@ import FollowBanner from "./sections/FollowUs/FollowUs"
 import SustainBanner from "./sections/BannerStability/Banner"
 import Collections from "./sections/Collections/Collections"
 import ModiWeek from "./sections/ModiWeek/ModiWeek"
+import BestSellers from "./sections/BestSellers/BestSellers"
 
 
 const HomePage = () => {
@@ -19,6 +20,8 @@ const HomePage = () => {
                     <WhiteButton linktext={"/new-in"} text={"New In"}></WhiteButton>
                 </div>
             </section>
+
+            <BestSellers />
 
             <Collections />
 

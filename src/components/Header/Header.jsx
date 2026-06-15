@@ -2,11 +2,9 @@ import LogoIcon from "../../assets/icons/LogoIcon.svg"
 import { Link, Outlet } from "react-router"
 import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon } from "../../assets/svg-icons-code/svgCode"
 import "./Header.css"
-import { useState } from "react"
 
 const Header = () => {
 
-    const [active, setActive] = useState(false)
 
     return (
         <header className="header">
@@ -55,8 +53,7 @@ const Header = () => {
                     </Link>
 
                     <Link to={"/"}>
-                        <FavoriteIcon className={`header__icon ${active ? "active" : ""}`}
-                        onClick={() => setActive(!active)}/>
+                        <FavoriteIcon />
                     </Link>
 
                     <Link to={"/"}>

@@ -1,0 +1,54 @@
+.best-sellers{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-sellers__title{
+    display: flex;
+    width: 1224px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.best__sellers__view-link{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    text-transform: capitalize;
+    text-align: right;
+    color: var(--primary-primary-600);
+    text-decoration: none;
+}
+
+.best-sellers__cards{
+    width: 1224px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.response__error{
+    color: var(--state-color-error);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.response__loading{
+    color: var(--primary-primary400);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    text-transform: capitalize;
+}

@@ -8,15 +8,15 @@ import { Outlet } from "react-router"
 
 const MainLayout = () => {
     return (
-        <Provider store={store}>
-        <Header />
+        <>
+            <Header />
 
-        <main className="main">
-            <Outlet/>
-        </main>
+            <main className="main">
+                <Outlet/>
+            </main>
 
-        <Footer />
-        </Provider>
+            <Footer />
+        </>
     )
 }
 
