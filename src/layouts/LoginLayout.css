@@ -29,3 +29,81 @@
     text-align: center;
     color: var(--black);
 }
+
+.account__mobile-pic{
+    display: none;
+    width: 360px;
+    height: 218px;
+}
+
+@media screen and (max-width: 1300px){
+    .account__cover{
+        width: 500px;
+        height: 737px;
+    }
+
+    .account{
+        gap: 80px
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .account{
+        flex-direction: column;
+    }
+
+    .account__content, .form__content, .form__input, .form__button{
+        width: 450px;
+    }
+
+    .account__cover{
+        width: 480px;
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .account__cover{
+        display: none;
+    }
+
+    .account__mobile-pic{
+        display: flex;
+    }
+
+    .account{
+        gap: 50px;
+    }
+
+    .form__title{
+        font-size: 20px;
+    }
+
+    .account__content, .form__content, .form__input, .form__button{
+        width: 370px;
+    }
+
+    .form__content{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .account__content, .form__content, .form__input, .form__button{
+        width: 320px;
+    }
+
+    .form__text{
+        font-size: 13px;
+    }
+
+    .form__forgot, .form__link{
+        font-size: 14px;
+    }
+
+    .account__mobile-pic{
+        width: 330px;
+    }
+}
+

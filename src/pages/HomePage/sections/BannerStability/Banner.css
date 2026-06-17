@@ -22,3 +22,38 @@
     text-align: start;
     width: 495px;
 }
+
+.sus-banner__img{
+    display: none;
+}
+
+@media screen and (max-width: 910px) {
+    .sus-banner__title{
+        font-size: 17px;
+        width: 418px;
+        text-align: end;
+    }
+
+    .sus-banner{
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sus-banner__title{
+        font-size: 14px;
+        width: 318px;
+    }
+
+    .sus-banner{
+        padding-right: 70px;
+        gap: 30px;
+        background-image: url("../../../../assets//images/sustainMobile.jpg");
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .sus-banner{
+        padding-right: 20px;
+    }
+}

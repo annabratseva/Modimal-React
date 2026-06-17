@@ -8,6 +8,8 @@ import ModiWeek from "./sections/ModiWeek/ModiWeek"
 import BestSellers from "./sections/BestSellers/BestSellers"
 
 
+
+
 const HomePage = () => {
     return (
         <>
@@ -17,7 +19,7 @@ const HomePage = () => {
                         Elegance in simplicity, <br /> Earth’s harmony
                     </h1>
 
-                    <WhiteButton linktext={"/new-in"} text={"New In"}></WhiteButton>
+                    <WhiteButton linktext={"/new-in"} text={"New In"} className={"mobile-button"}/>
                 </div>
             </section>
 
