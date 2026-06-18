@@ -1,9 +1,14 @@
 import LogoIcon from "../../assets/icons/LogoIcon.svg"
-import { Link, Outlet } from "react-router"
+import { Link, Outlet, useLocation } from "react-router"
 import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon } from "../../assets/svg-icons-code/svgCode"
 import "./Header.css"
+import { FavoriteClicked } from "../../assets/svg-icons-code/svgCode"
 
 const Header = () => {
+
+
+    const location = useLocation()
+    const isFavoritePage = location.pathname === "/favorite"
 
 
     return (
@@ -52,8 +57,11 @@ const Header = () => {
                         <AccountIcon />
                     </Link>
 
-                    <Link to={"/favorite"}>
-                        <FavoriteIcon />
+                    <Link to="/favorite">
+                        {isFavoritePage
+                            ? <FavoriteClicked />
+                            : <FavoriteIcon />
+                        }
                     </Link>
 
                     <Link to={"/"}>

@@ -1,7 +1,10 @@
-import { useDispatch } from "react-redux"
-import { removeFromFavorite } from "../../../BLL/reducers/FavoriteReducer"
-import { FavoriteIcon } from "../../../assets/svg-icons-code/svgCode"
+import { removeFromFavorite } from "../../../BLL/reducers/FavoriteReducer";
 import "../clothesCards/clothesCard.css"
+import { useDispatch } from "react-redux";
+import { useQuery } from "@tanstack/react-query";
+import { FavoriteIcon } from "../../../assets/svg-icons-code/svgCode"
+import { FavoriteClicked } from "../../../assets/svg-icons-code/svgCode";
+
 
 const FavoriteCards = ({ id, title, description, price, image, colors }) => {
     
@@ -19,7 +22,7 @@ const FavoriteCards = ({ id, title, description, price, image, colors }) => {
                     className="card__button"
                     onClick={() => dispatch(removeFromFavorite(id))}
                 >
-                    <FavoriteIcon className="card__icon" />
+                    <FavoriteClicked className="card__icon" />
                 </button>
             </div>
 
