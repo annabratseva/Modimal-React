@@ -1,36 +1,33 @@
 import { useDispatch } from "react-redux"
+import { removeFromFavorite } from "../../../BLL/reducers/FavoriteReducer"
 import { FavoriteIcon } from "../../../assets/svg-icons-code/svgCode"
-import "./clothesCard.css"
-import { addToFavorite } from "../../../BLL/reducers/FavoriteReducer"
+import "../clothesCards/clothesCard.css"
 
-const ClothesCard = ({ product, colors, fallbackImage }) => {
+const FavoriteCards = ({ id, title, description, price, image, colors }) => {
+    
     const dispatch = useDispatch()
 
     return (
         <div className="card">
             <div className="card__image">
                 <img
-                    src={fallbackImage} 
-                    alt={product.title}
+                    src={image}
+                    alt={title}
                     className="card__img"
                 />
                 <button
                     className="card__button"
-                    onClick={() => dispatch(addToFavorite({
-                        ...product,
-                        image: fallbackImage,
-                        colors: colors
-                    }))}
+                    onClick={() => dispatch(removeFromFavorite(id))}
                 >
                     <FavoriteIcon className="card__icon" />
                 </button>
             </div>
 
             <div className="card__text">
-                <h1 className="card__title">{product.title}</h1>
+                <h1 className="card__title">{title}</h1>
                 <div className="card__inner-text">
-                    <p className="card__subtitle">{product.description?.slice(0, 30)}</p>
-                    <p className="card__price">${product.price}</p>
+                    <p className="card__subtitle">{description?.slice(0, 30)}</p>
+                    <p className="card__price">${price}</p>
                 </div>
 
                 <div className="card__round">
@@ -51,4 +48,4 @@ const ClothesCard = ({ product, colors, fallbackImage }) => {
     )
 }
 
-export default ClothesCard
+export default FavoriteCards

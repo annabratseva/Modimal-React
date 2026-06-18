@@ -2,16 +2,17 @@ import GreenButton from "../../shared/ui/buttons/GreenFormButton"
 import "./RegisterPage.css"
 import InputLine from "../../shared/ui/input/Input"
 
-import { RegisterScheme } from "../../schemes/RegisterScheme"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Link } from "react-router-dom"
 import { AppleIcon, FacebookFormIcon, GoogleIcon } from "../../assets/svg-icons-code/svgCode"
+import { RegisterScheme1 } from "../../schemes/RegisterScheme1"
+
 
 const RegisterPage = () => {
 
     const {handleSubmit, register, formState: {errors, isSubmitting}, watch} = useForm({
-        resolver: zodResolver(RegisterScheme)
+        resolver: zodResolver(RegisterScheme1)
     })
 
     const onSubmit = (data) => {

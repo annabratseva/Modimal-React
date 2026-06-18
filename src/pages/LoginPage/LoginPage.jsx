@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux"
 import "./LoginPage.css"
-import { LoginScheme } from "../../schemes/LoginScheme"
 import InputLine from "../../shared/ui/input/Input"
 
 import { useForm } from "react-hook-form"
@@ -10,26 +9,31 @@ import { AppleIcon, FacebookFormIcon, GoogleIcon } from "../../assets/svg-icons-
 import { Link } from "react-router-dom"
 
 import { login } from "../../BLL/reducers/AuthReducer"
+import { LoginScheme1 } from "../../schemes/LoginScheme1"
+import { redirect, useNavigate } from "react-router"
 
 const LoginPage = () => {
 
     const dispatch = useDispatch()
 
+    const navigate = useNavigate()
+
     const {handleSubmit, register, formState: {errors, isSubmitting}, watch} = useForm({
-            resolver: zodResolver(LoginScheme)
+            resolver: zodResolver(LoginScheme1)
         })
 
     const onSubmit = (data) => {
-        const savedUser = JSON.parse(localStorage.getItem("user"))
-
-        if (!savedUser) {
-            return
+        const savedUser = JSON.parse(localStorage.getItem("users"))
+        
+        if (!savedUser[0]) {
+            return <p className="form__error">No such user.</p>
         }
 
-        if (savedUser &&
-        savedUser.email === data.email &&
-        savedUser.password === data.password
+        if (savedUser[0] &&
+        savedUser[0].email === data.email &&
+        savedUser[0].password === data.password
         ) {
+            navigate("/")
             dispatch(login({ email: savedUser.email }))
         } 
 
@@ -64,6 +68,7 @@ const LoginPage = () => {
                 <p className="form__forgot">Forgot your password?</p>
 
                 <GreenButton text={"Log In"} type="submit" />
+                
             </form>
 
             <div className="form__buttons">

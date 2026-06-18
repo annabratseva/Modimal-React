@@ -8,14 +8,18 @@ import { store } from './BLL/store'
 
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 
+import { CardMetaProvider } from './shared/context/CardMetaContext'
+
 const client = new QueryClient()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <QueryClientProvider client={client}>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </QueryClientProvider>
+    <CardMetaProvider>
+      <QueryClientProvider client={client}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </QueryClientProvider>
+    </CardMetaProvider>
   </StrictMode>,
 )
