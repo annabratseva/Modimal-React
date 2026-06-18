@@ -203,6 +203,11 @@
 
 .footer__icon{
     cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.footer__icon{
+    transform: translateY(-5px);
 }
 
 @media screen and (max-width: 1300px) {
@@ -227,13 +232,15 @@
         align-items: start;
     }
 
+    .mobile{
+        display: flex;
+    }
+
     .footer__icons{
         display: none;
     }
 
-    .mobile{
-        display: flex;
-    }
+    
 
     .footer__bottom{
         flex-direction: column;

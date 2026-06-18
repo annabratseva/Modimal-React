@@ -39,6 +39,9 @@
     overflow: hidden;
 }
 
+.collections1__img, .collections2__img, .collections3__img, .collections4__img{
+    transition: .3s ease-in-out;
+}
 
 
 .collections1__img{
@@ -89,4 +92,20 @@
 .collections__position1, .collections__position2, .collections__position3, .collections__position4{
     position: absolute;
     z-index: 5;
+}
+
+.collections1__img:hover{
+    transform: translateX(-10px);
+}
+
+.collections2__img:hover{
+    transform: translateY(10px);
+}
+
+.collections3__img:hover{
+    transform: translateX(10px);
+}
+
+.collections4__img:hover{
+    transform: translateY(-10px);
 }

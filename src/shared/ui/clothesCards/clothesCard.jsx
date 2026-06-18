@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { FavoriteIcon } from "../../../assets/svg-icons-code/svgCode"
 import "./clothesCard.css"
-import { addToFavorite } from "../../../BLL/reducers/FavoriteReducer"
+import { addToFavorite, removeFromFavorite } from "../../../BLL/reducers/FavoriteReducer"
 import { FavoriteClicked } from "../../../assets/svg-icons-code/svgCode"
 import { useState } from "react"
 
