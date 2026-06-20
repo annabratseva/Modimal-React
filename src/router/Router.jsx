@@ -11,6 +11,8 @@ import LoginPage from "../pages/LoginPage/LoginPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import LoginLayout from "../layouts/LoginLayout";
 import FavoritePage from "../pages/FavoritePage/FavoritePage";
+import ShopAll from "../pages/ShopAllPage/ShopAll";
+import MaterialsPage from "../pages/MaterialsPage/Materials";
 
 export const router = createBrowserRouter([
     {
@@ -42,8 +44,16 @@ export const router = createBrowserRouter([
                 element: <SustainPage />
             },
             {
+                path: "materials",
+                element: <MaterialsPage />
+            },
+            {
                 path: "favorite",
                 element: <FavoritePage />
+            },
+            {
+                path: "shop-all",
+                element: <ShopAll />
             },
             {
                 path: "account",
