@@ -5,7 +5,7 @@ import Modiweek3 from "../../../../assets/images/modiweek3.png"
 import Modiweek4 from "../../../../assets/images/modiweek4.png"
 import CardsModiweek from "../../../../shared/ui/cards/cardsModiweek"
 
-import "./Modiweek.css"
+import "./ModiWeek.css"
 
 
 const ModiWeek = () => {
@@ -18,8 +18,10 @@ const ModiWeek = () => {
             <div className="modiweek__cards">
                 <CardsModiweek image={Modiweek1} cardTitle={"Sunday"}/>
                 <CardsModiweek image={Modiweek2} cardTitle={"Monday"}/>
-                <CardsModiweek image={Modiweek3} cardTitle={"Tuesday"}/>
-                <CardsModiweek image={Modiweek4} cardTitle={"Wednesday"}/>
+                <div className="modiweek__other">
+                    <CardsModiweek image={Modiweek3} cardTitle={"Tuesday"}/>
+                    <CardsModiweek image={Modiweek4} cardTitle={"Wednesday"}/>
+                </div>
             </div>
         </section>
     )

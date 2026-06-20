@@ -18,5 +18,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;;
+    gap: 24px;
+}
+
+.modiweek__other{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+@media screen and (max-width: 1300px) {
+   .modiweek__other{
+        display: none;
+   }
+
+
+   .modiweek__title, .modiweek__cards{
+    width: 600px;
+   }
+}
+
+@media screen and (max-width: 660px) {
+    .modiweek__cards, .modiweek__title{
+        width: 290px;
+    }
+
+    .modiweek__cards{
+        flex-direction: column;
+    }
 }

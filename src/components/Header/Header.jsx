@@ -4,6 +4,10 @@ import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon } from "../../assets/sv
 import "./Header.css"
 import { FavoriteClicked } from "../../assets/svg-icons-code/svgCode"
 import { useState } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { useNavigate } from "react-router"
+import { logout } from "../../BLL/reducers/AuthReducer"
+
 
 import CollectionPic1 from "../../assets/images/collectionMenu1.jpg"
 import CollectionPic2 from "../../assets/images/collectionMenu2.jpg"
@@ -24,11 +28,22 @@ import MaterialsPic2 from "../../assets/images/SustainMenu2.jpg"
 
 const Header = () => {
 
-
+    const dispatch = useDispatch()
     const location = useLocation()
+    const navigate = useNavigate()
     const isFavoritePage = location.pathname === "/favorite"
 
     const [isOpen, setIsOpen] = useState(null)
+
+    const { isAuth, email } = useSelector(state => state.auth)
+
+    const handleLogout = () => {
+        localStorage.removeItem("currentUser")
+        dispatch(logout())
+        setIsOpen(null)
+        navigate("/")
+    }
+
 
 
     return (
@@ -305,9 +320,40 @@ const Header = () => {
                         <SearchIcon />
                     </Link>
 
-                    <Link to={"/account"}>
+                    <Link to={"/account"} onMouseEnter={() => setIsOpen("account")}>
                         <AccountIcon />
                     </Link>
+
+                    {isOpen === "account" && (
+                        <div 
+                            className="header__mega-account"
+                            onMouseEnter={() => setIsOpen("account")}
+                            onMouseLeave={() => setIsOpen(null)}
+                        >
+                            <div className="header__categories-account">
+                                    {isAuth ? (
+                                        <div className="header__account-cont">
+                                            <span className="header__user-email">Your account:<br /> {email}</span>
+                                            <button className="header__logout" onClick={handleLogout}>
+                                                Log Out
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <>
+                                            <p className="header__user-email">Don't have account yet? <br /><span className="header__green">Let's start!</span></p>
+
+                                            <Link to={"/account"} className="header__mega-link2">
+                                                <AccountIcon />
+                                                Log In
+                                            </Link>
+                                            <Link to={"/account/register"} className="header__mega-link2">
+                                                Create An Account
+                                            </Link>
+                                        </>
+                                    )}
+                            </div>
+                        </div>
+                    )}
 
                     <Link to="/favorite">
                         {isFavoritePage

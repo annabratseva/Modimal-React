@@ -7,9 +7,13 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Link } from "react-router-dom"
 import { AppleIcon, FacebookFormIcon, GoogleIcon } from "../../assets/svg-icons-code/svgCode"
 import { RegisterScheme1 } from "../../schemes/RegisterScheme1"
-
+import { useNavigate } from "react-router"
+import { useState } from "react"
 
 const RegisterPage = () => {
+
+    const navigate = useNavigate()
+    const [isSuccess, setIsSuccess] = useState(false)
 
     const {handleSubmit, register, formState: {errors, isSubmitting}, watch} = useForm({
         resolver: zodResolver(RegisterScheme1)
@@ -22,6 +26,11 @@ const RegisterPage = () => {
 
         localStorage.setItem("users", JSON.stringify(users))
 
+        setIsSuccess(true)
+
+        setTimeout(() => {
+            navigate("/account")
+        }, 1500)
     }
 
     return (
@@ -67,6 +76,12 @@ const RegisterPage = () => {
                 )}
 
                 <GreenButton text={"Register Now"} type="submit" />
+
+                {isSuccess && (
+                    <p className="form__link">
+                        Successfully registered! Redirecting to login...
+                    </p>
+                )}
             </form>
 
             <div className="form__buttons">
