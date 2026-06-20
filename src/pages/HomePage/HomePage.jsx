@@ -19,7 +19,7 @@ const HomePage = () => {
                         Elegance in simplicity, <br /> Earth’s harmony
                     </h1>
 
-                    <WhiteButton linktext={"/new-in"} text={"New In"} className={"mobile-button"}/>
+                    <WhiteButton linktext={"/new-in"} text={"New In"} className2={"mobile-button"}/>
                 </div>
             </section>
 

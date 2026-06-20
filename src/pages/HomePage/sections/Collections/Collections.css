@@ -33,10 +33,14 @@
     
 }
 
+.collections__relative1{
+    position: relative;
+    display: none;
+}
 
 .collections__pic-inner-cont{
     position: relative;
-    overflow: hidden;
+   
 }
 
 .collections1__img, .collections2__img, .collections3__img, .collections4__img{
@@ -78,7 +82,6 @@
     right: 16px;
 }
 
-
 .collections__position1, .collections__position2{
     bottom: 16px;
     right: 16px;
@@ -108,4 +111,128 @@
 
 .collections4__img:hover{
     transform: translateY(-10px);
+}
+
+@media screen and (max-width: 1300px) {
+    .collections__pictures{
+        width: 800px;
+        height: 1200px;
+    }
+
+    .collections__pic-container1{
+        width: 400px;
+        height: 1200px;
+    }
+
+    .collections1__img, .collections2__img, .collections3__img, .collections4__img{
+        width: 400px;
+    }
+
+    .collections3__img, .collections2__img{
+        height: 600px;
+    }
+
+    .collections1__img{
+        height: 400px;
+    }
+
+    .collections4__img{
+        height: 318px;
+    }
+
+    .collections__title{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .collections__pictures{
+        width: 600px;
+        height: 900px;
+    }
+
+    .collections__pic-container1{
+        width: 600px;
+        height: 900px;
+    }
+
+    .collections1__img, .collections2__img, .collections3__img, .collections4__img{
+        width: 300px;
+    }
+
+    .collections3__img, .collections2__img{
+        height: 440px;
+    }
+
+    .collections1__img{
+        height: 300px;
+    }
+
+    .collections4__img{
+        height: 218px;
+    }
+
+    .collections__title{
+        width: 600px;
+    }
+
+    .collections__position1,.collections__position2, .collections__position3, .collections__position4{
+        display: none;
+    }
+
+    .collections__relative1{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .collections__pictures{
+        width: 550px;
+        height: 800px;
+    }
+
+    .collections__pic-container1{
+        width: 400px;
+        height: 800px;
+    }
+
+    .collections1__img, .collections2__img, .collections3__img, .collections4__img{
+        width: 250px;
+    }
+
+    .collections3__img, .collections2__img{
+        height: 380px;
+    }
+
+    .collections1__img{
+        height: 250px;
+    }
+
+    .collections4__img{
+        height: 198px;
+    }
+
+    .collections__title{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .collections__pictures{
+        flex-direction: column;
+        height: auto;
+        width: 300px;
+        gap: 60px
+    }
+
+ 
+
+    .collections__pic-container1{
+        width: 250px;
+        height: 700px;
+    }
+
+    .collections__title{
+        width: 250px;
+    }
 }

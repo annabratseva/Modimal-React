@@ -1,6 +1,6 @@
 import LogoIcon from "../../assets/icons/LogoIcon.svg"
 import { Link, Outlet, useLocation } from "react-router"
-import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon } from "../../assets/svg-icons-code/svgCode"
+import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon, BurgerMenu, CrossedIcon } from "../../assets/svg-icons-code/svgCode"
 import "./Header.css"
 import { FavoriteClicked } from "../../assets/svg-icons-code/svgCode"
 import { useState } from "react"
@@ -57,6 +57,19 @@ const Header = () => {
 
             <div className="header__main">
 
+
+                <div className="header__mobile-cont">
+
+                    <button type="button" className="header__mobile-menu">
+                        <BurgerMenu/>
+                    </button>
+
+                    <button type="button" className="header__mobile-menu">
+                        <SearchIcon />
+                    </button>
+
+                </div>
+
                 <div className="header__logo">
                     <div className="header__logo-main-text">
                         <h1 className="header__title">modimal</h1>
@@ -66,7 +79,25 @@ const Header = () => {
                     <p className="header__logo-subtitle">women clothing</p>
                 </div>
 
+
+                <div className="header__mobile-cont wider-mobile">
+
+                    <Link to="/favorite">
+                        {isFavoritePage
+                            ? <FavoriteClicked />
+                            : <FavoriteIcon />
+                        }
+                    </Link>
+
+                    <Link to={"/"}>
+                        <CartIcon />
+                    </Link>
+
+                </div>
+
                 <nav className="header__nav">
+
+                    
 
                     {isOpen && (
                         <div className="header__overlay"></div>

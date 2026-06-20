@@ -47,11 +47,9 @@ const ClothesCard = ({ product, colors, fallbackImage }) => {
                         <span
                             key={color}
                             style={{
-                                backgroundColor: color,
-                                width: "24px",
-                                height: "24px",
-                                borderRadius: "24px",
+                                backgroundColor: color
                             }}
+                            className="card__round-style"
                         />
                     ))}
                 </div>

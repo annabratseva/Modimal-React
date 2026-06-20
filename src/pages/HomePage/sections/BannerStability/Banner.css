@@ -37,6 +37,10 @@
     .sus-banner{
         gap: 40px;
     }
+
+    .mobile-button-wider{
+        width: 152px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -50,6 +54,8 @@
         gap: 30px;
         background-image: url("../../../../assets//images/sustainMobile.jpg");
     }
+
+    
 }
 
 @media screen and (max-width: 460px) {

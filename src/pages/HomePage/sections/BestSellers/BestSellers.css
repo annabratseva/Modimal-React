@@ -52,3 +52,20 @@
     line-height: 180%;
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 1300px) {
+    .best-sellers__cards, .best-sellers__title{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .best-sellers__cards, .best-sellers__title{
+        width: 270px;
+    }
+
+    .best-sellers__cards{
+        flex-direction: column;
+        gap: 54px;
+    }
+}

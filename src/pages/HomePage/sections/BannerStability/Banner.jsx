@@ -10,7 +10,7 @@ const SustainBanner = () => {
             
             <h1 className="sus-banner__title">Stylish sustainability in clothing promotes eco-friendly choices for a greater future</h1>
 
-            <WhiteButton linktext={"/sustainability"} text={"Sustainability"}/>
+            <WhiteButton linktext={"/sustainability"} text={"Sustainability"} className2={"mobile-button"} className={"mobile-button-wider"}/>
         </section>
     )
 }

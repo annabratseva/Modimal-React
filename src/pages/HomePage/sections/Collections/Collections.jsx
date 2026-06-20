@@ -20,12 +20,15 @@ const Collections = () => {
                     <div className="collections__pic-inner-cont">
                         <img src={CollectionImg1} alt="PIC1" className="collections1__img" />
 
+                        <WhiteButton linktext={"/"} text={"Boluses"} className={"collections__relative1"}/>
                         <WhiteButton linktext={"/"} text={"Boluses"} className={"collections__position1"}/>
                     </div>
 
                     <div className="collections__pic-inner-cont">
                         <img src={CollectionImg3} alt="PIC2" className="collections2__img" />
 
+
+                        <WhiteButton linktext={"/"} text={"Dresses"} className={"collections__relative1"}/>
                         <WhiteButton linktext={"/"} text={"Dresses"} className={"collections__position2"}/>
                     </div>
                 </div>
@@ -34,12 +37,15 @@ const Collections = () => {
                     <div className="collections__pic-inner-cont">
                         <img src={CollectionImg2} alt="PIC3" className="collections3__img" />
 
+
+                        <WhiteButton linktext={"/"} text={"Pants"} className={"collections__relative1"}/>
                         <WhiteButton linktext={"/"} text={"Pants"} className={"collections__position3"}/>
                     </div>
 
                     <div className="collections__pic-inner-cont">
                         <img src={CollectionImg4} alt="PIC4" className="collections4__img" />
 
+                        <WhiteButton linktext={"/"} text={"Outwear"} className={"collections__relative1"}/>
                         <WhiteButton linktext={"/"} text={"Outwear"} className={"collections__position4"}/>
                     </div>
                 </div>
