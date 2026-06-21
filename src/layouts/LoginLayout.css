@@ -47,6 +47,12 @@
     }
 }
 
+@media screen and (max-width: 1260px) {
+    .account{
+        padding-top: 100px;
+    }
+}
+
 @media screen and (max-width: 1050px){
     .account{
         flex-direction: column;
