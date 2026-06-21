@@ -31,11 +31,18 @@
     text-align: start;
 }
 
+.checked::after{
+    content: "✔";
+}
+
 .footer__submit-icon{
     width: 16px;
     height: 16px;
     background-color: var(--white);
+    
 }
+
+
 
 .footer__submit{
     display: flex;

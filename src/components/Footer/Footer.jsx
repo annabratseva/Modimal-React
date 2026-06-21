@@ -4,10 +4,13 @@ import { useDispatch, useSelector } from "react-redux"
 import { FooterEmailScheme } from "../../schemes/FooterEmailScheme"
 import { getEmail } from "../../BLL/reducers/FooterReducer"
 
+
+
 import "./Footer.css"
 
 import { FacebookIcon, FooterArrowIcon, FooterContactIcon, InstaIcon, PinterestIcon, RightsIcon, TiktokIcon } from "../../assets/svg-icons-code/svgCode"
 import { Link } from "react-router"
+import { useState } from "react"
 
 const Footer = () => {
 
@@ -19,9 +22,14 @@ const Footer = () => {
         resolver: zodResolver(FooterEmailScheme)
     })
 
+    const [isSubmitted, setIsSubmitted] = useState(false)
+
     const sendFooterEmail = (data) => {
         dispatchEmail(getEmail(data))
+        setIsSubmitted(true)
     }
+
+    
 
     return (
         <footer className="footer">
@@ -40,7 +48,7 @@ const Footer = () => {
                         {!!errors?.email?.message && <p className='footer__error'>{errors?.email?.message}</p>}
 
                         <button className="footer__submit">
-                            <div className="footer__submit-icon"></div>
+                            {isSubmitted === true ? <div className="footer__submit-icon checked"></div> : <div className="footer__submit-icon"></div>}
 
                             <h1 className="footer__button-text">By Submittng your email, you agree to receive advertising emails from Modimal.</h1>
                         </button>
