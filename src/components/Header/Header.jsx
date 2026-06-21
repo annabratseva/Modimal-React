@@ -1,8 +1,7 @@
 import LogoIcon from "../../assets/icons/LogoIcon.svg"
 import { Link, Outlet, useLocation } from "react-router"
-import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon, BurgerMenu, CrossedIcon } from "../../assets/svg-icons-code/svgCode"
+import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon, BurgerMenu, CrossedIcon, FavoriteClicked } from "../../assets/svg-icons-code/svgCode"
 import "./Header.css"
-import { FavoriteClicked } from "../../assets/svg-icons-code/svgCode"
 import { useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { useNavigate } from "react-router"
@@ -25,6 +24,7 @@ import PlusSizePic3 from "../../assets/images/plusSizeMenu3.jpg"
 
 import MaterialsPic1 from "../../assets/images/SustainMenu1.jpg"
 import MaterialsPic2 from "../../assets/images/SustainMenu2.jpg"
+import MobileHeader from "./MobileHeader/MobileHeader"
 
 const Header = () => {
 
@@ -44,12 +44,15 @@ const Header = () => {
         navigate("/")
     }
 
+    const [IsMobileHeaderOpen, setMobileHeader] = useState(false)
+
+    const toggleMobileMenu = () => {
+        setMobileHeader(prev => !prev)
+    }
 
 
     return (
         <header className="header">
-
-            
 
             <div className="header__green-line">
                 <h1 className="header__green-line-text">Enjoy Free Shipping On All Orders</h1>
@@ -60,8 +63,8 @@ const Header = () => {
 
                 <div className="header__mobile-cont">
 
-                    <button type="button" className="header__mobile-menu">
-                        <BurgerMenu/>
+                    <button type="button" className="header__mobile-menu" onClick={toggleMobileMenu}>
+                        {IsMobileHeaderOpen ? <CrossedIcon /> : <BurgerMenu />}
                     </button>
 
                     <button type="button" className="header__mobile-menu">
@@ -94,6 +97,16 @@ const Header = () => {
                     </Link>
 
                 </div>
+
+                
+                <MobileHeader 
+                    isOpen={IsMobileHeaderOpen} 
+                    onClose={() => setMobileHeader(false)}
+                    isAuth={isAuth}
+                    email={email}
+                    onLogout={handleLogout}
+                />
+                
 
                 <nav className="header__nav">
 
@@ -378,7 +391,7 @@ const Header = () => {
                                                 Log In
                                             </Link>
                                             <Link to={"/account/register"} className="header__mega-link2">
-                                                Create An Account
+                                                Create Account
                                             </Link>
                                         </>
                                     )}
