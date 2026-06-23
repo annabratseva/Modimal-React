@@ -1,0 +1,28 @@
+.link-text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-text__titles{
+    width: 1224px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 16px;
+}
+
+.link-text__subtitle{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180%;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--black);
+}
+
+.green-text-link{
+    color: var(--primary);
+}
