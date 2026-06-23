@@ -1,5 +1,5 @@
 import TitleHome from "../../../../shared/ui/titleHome/titleHome"
-import followBanner from "../../../../assets/images/followus.png"
+import followBanner from "../../../../assets/images/followus.jpg"
 import "./FollowUs.css"
 import followMobile from "../../../../assets/images/followUsPic2.jpg"
 
