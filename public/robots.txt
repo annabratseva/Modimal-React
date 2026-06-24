@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://annabratseva.github.io/Modimal-React/sitemap.xml

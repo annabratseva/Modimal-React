@@ -14,9 +14,9 @@ const COLOR_SETS = [
 ];
 
 const FALLBACK_IMAGES = [
-    "/images/imageCloth1.png",
-    "/images/imageCloth2.png",
-    "/images/imageCloth3.png"
+    "/Modimal-React/images/imageCloth1.png",
+    "/Modimal-React/images/imageCloth2.png",
+    "/Modimal-React/images/imageCloth3.png"
 ];
 
 export const CardMetaProvider = ({ children }) => {

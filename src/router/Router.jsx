@@ -74,7 +74,8 @@ export const router = createBrowserRouter([
                     }
                 ]
             }
-
         ]
     }
-])
+], {
+    basename: '/Modimal-React/'
+})
