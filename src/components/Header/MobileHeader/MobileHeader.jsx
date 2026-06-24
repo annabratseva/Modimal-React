@@ -7,6 +7,10 @@ import { useEffect } from "react"
 
 const MobileHeader = ({ onClose, isOpen, isAuth, email, onLogout }) => {
 
+    const [openItems, setOpenItems] = useState([])
+    const [isSearchOpen, setIsSearchOpen] = useState(false)
+    const [searchValue, setSearchValue] = useState("")
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden"
@@ -19,7 +23,7 @@ const MobileHeader = ({ onClose, isOpen, isAuth, email, onLogout }) => {
         }
     }, [isOpen])
 
-    const [openItems, setOpenItems] = useState([])
+    
 
     const toggle = (name) => {
         setOpenItems(prev =>
@@ -29,13 +33,43 @@ const MobileHeader = ({ onClose, isOpen, isAuth, email, onLogout }) => {
         )
     }
 
+    const handleSearchSubmit = (e) => {
+        e.preventDefault()
+        if (!searchValue.trim()) return
+        navigate(`/search?q=${searchValue.trim()}`)
+    }
+
+    const toggleSearch = () => {
+        setIsSearchOpen(prev => !prev)
+        setSearchValue("")
+    }
+
     if (!isOpen) return null
-
-    
-
 
     return (
         <nav className="mobile-header">
+
+            {isSearchOpen && (
+                <form className="header__search-bar" onSubmit={handleSearchSubmit}>
+
+                    <div className="header__search-content">
+
+                        <button type="submit" className="header__search-submit">
+                            <GraySearch />
+                        </button>
+
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                            className="header__search-input"
+                            autoFocus
+                        />
+                    </div>
+                </form>
+            )}
+
             <div className="mobile-header__item" onClick={() => toggle("collection")}>
                 <div className={`mobile-header__title ${openItems.includes("collection") ? "no-border" : ""}`}>
                     <Link to={"/collection"} className="mobile-header__link" onClick={onClose}>Collection</Link>

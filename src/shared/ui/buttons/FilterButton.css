@@ -1,0 +1,29 @@
+.filter-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 392px;
+    height: 48px;
+    background-color: var(--primary);
+    border: none;
+    padding: 16px;
+}
+
+.filter-btn__title{
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--white)
+}
+
+.filter-btn__icon{
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import LogoIcon from "../../assets/icons/LogoIcon.svg"
 import { Link, Outlet, useLocation } from "react-router"
-import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon, BurgerMenu, CrossedIcon, FavoriteClicked } from "../../assets/svg-icons-code/svgCode"
+import { AccountIcon, CartIcon, FavoriteIcon, SearchIcon, BurgerMenu, CrossedIcon, FavoriteClicked, GraySearch } from "../../assets/svg-icons-code/svgCode"
 import "./Header.css"
 import { useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
@@ -28,12 +28,19 @@ import MobileHeader from "./MobileHeader/MobileHeader"
 
 const Header = () => {
 
+    // фигулины другие
+
     const dispatch = useDispatch()
     const location = useLocation()
     const navigate = useNavigate()
     const isFavoritePage = location.pathname === "/favorite"
 
     const [isOpen, setIsOpen] = useState(null)
+    const [IsMobileHeaderOpen, setMobileHeader] = useState(false)
+    const [isSearchOpen, setIsSearchOpen] = useState(false)
+    const [searchValue, setSearchValue] = useState("")
+
+    // выход из логина (ниже кнопка)
 
     const { isAuth, email } = useSelector(state => state.auth)
 
@@ -44,12 +51,22 @@ const Header = () => {
         navigate("/")
     }
 
-    const [IsMobileHeaderOpen, setMobileHeader] = useState(false)
+    // для мобильной менюшки код
 
     const toggleMobileMenu = () => {
         setMobileHeader(prev => !prev)
     }
 
+    const handleSearchSubmit = (e) => {
+        e.preventDefault()
+        if (!searchValue.trim()) return
+        navigate(`/search?q=${searchValue.trim()}`)
+    }
+
+    const toggleSearch = () => {
+        setIsSearchOpen(prev => !prev)
+        setSearchValue("")
+    }
 
     return (
         <header className="header">
@@ -57,6 +74,27 @@ const Header = () => {
             <div className="header__green-line">
                 <h1 className="header__green-line-text">Enjoy Free Shipping On All Orders</h1>
             </div>
+
+            {isSearchOpen && (
+                <form className="header__search-bar" onSubmit={handleSearchSubmit}>
+
+                    <div className="header__search-content">
+
+                        <button type="submit" className="header__search-submit">
+                            <GraySearch />
+                        </button>
+
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                            className="header__search-input"
+                            autoFocus
+                        />
+                    </div>
+                </form>
+            )}
 
             <div className="header__main">
 
@@ -67,8 +105,12 @@ const Header = () => {
                         {IsMobileHeaderOpen ? <CrossedIcon /> : <BurgerMenu />}
                     </button>
 
-                    <button type="button" className="header__mobile-menu">
-                        <SearchIcon />
+                    <button
+                        type="button"
+                        className="header__mobile-menu"
+                        onClick={toggleSearch}
+                    >
+                        {isSearchOpen ? <CrossedIcon /> : <SearchIcon />}
                     </button>
 
                 </div>
@@ -98,19 +140,22 @@ const Header = () => {
 
                 </div>
 
-                
-                <MobileHeader 
-                    isOpen={IsMobileHeaderOpen} 
+
+                <MobileHeader
+                    isOpen={IsMobileHeaderOpen}
                     onClose={() => setMobileHeader(false)}
                     isAuth={isAuth}
                     email={email}
                     onLogout={handleLogout}
                 />
-                
+
+
+
+
+
 
                 <nav className="header__nav">
 
-                    
 
                     {isOpen && (
                         <div className="header__overlay"></div>
@@ -124,7 +169,7 @@ const Header = () => {
                     </li>
 
                     {isOpen === "collection" && (
-                        <div 
+                        <div
                             className="header__mega-menu"
                             onMouseEnter={() => setIsOpen("collection")}
                             onMouseLeave={() => setIsOpen(null)}
@@ -180,13 +225,13 @@ const Header = () => {
                         </div>
                     )}
 
-                    <li className="header__li" 
-                    onMouseEnter={() => setIsOpen("new-in")}>
+                    <li className="header__li"
+                        onMouseEnter={() => setIsOpen("new-in")}>
                         <Link to={"/new-in"} className="header__link">New In</Link>
                     </li>
 
                     {isOpen === "new-in" && (
-                        <div 
+                        <div
                             className="header__mega-menu wider2"
                             onMouseEnter={() => setIsOpen("new-in")}
                             onMouseLeave={() => setIsOpen(null)}
@@ -235,13 +280,13 @@ const Header = () => {
                         </div>
                     )}
 
-                    <li className="header__li" 
-                    onMouseEnter={() => setIsOpen("modiweek")}>
+                    <li className="header__li"
+                        onMouseEnter={() => setIsOpen("modiweek")}>
                         <Link to={"/modiweek"} className="header__link">ModiWeek</Link>
                     </li>
 
                     {isOpen === "modiweek" && (
-                        <div 
+                        <div
                             className="header__mega-menu wider"
                             onMouseEnter={() => setIsOpen("modiweek")}
                             onMouseLeave={() => setIsOpen(null)}
@@ -270,21 +315,21 @@ const Header = () => {
                                 <div className="header__mega-img3">
                                     <img src={ModiWeekPic2} alt="PIC1" className="header__mega-pic" />
                                     <p className="header__mega-subtitle">New</p>
-                                    
+
                                 </div>
-                                
+
                             </div>
                         </div>
                     )}
 
-                    <li className="header__li" 
-                    onMouseEnter={() => setIsOpen("plus-size")}>
+                    <li className="header__li"
+                        onMouseEnter={() => setIsOpen("plus-size")}>
                         <Link to={"/plus-size"} className="header__link">Plus Size</Link>
                     </li>
 
 
                     {isOpen === "plus-size" && (
-                        <div 
+                        <div
                             className="header__mega-menu wider"
                             onMouseEnter={() => setIsOpen("plus-size")}
                             onMouseLeave={() => setIsOpen(null)}
@@ -324,12 +369,12 @@ const Header = () => {
                     )}
 
                     <li className="header__li"
-                    onMouseEnter={() => setIsOpen("sustain")}>
+                        onMouseEnter={() => setIsOpen("sustain")}>
                         <Link to={"/sustainability"} className="header__link">Sustainability</Link>
                     </li>
 
                     {isOpen === "sustain" && (
-                        <div 
+                        <div
                             className="header__mega-menu wider"
                             onMouseEnter={() => setIsOpen("sustain")}
                             onMouseLeave={() => setIsOpen(null)}
@@ -344,57 +389,64 @@ const Header = () => {
                                     <li className="header__mega-li">packaging</li>
                                     <li className="header__mega-li">product care</li>
                                     <li className="header__mega-li">our suppliers</li>
-                                    
+
                                 </ul>
                             </div>
 
                             <div className="header__mega-images4">
-                            
+
                                 <img src={MaterialsPic1} alt="PIC1" className="header__mega-pic4" />
-                            
+
                                 <img src={MaterialsPic2} alt="PIC1" className="header__mega-pic4" />
-                                
+
                             </div>
                         </div>
                     )}
                 </nav>
 
                 <div className="header__icons">
-                    <Link to={"/"}>
-                        <SearchIcon />
-                    </Link>
+                    <button
+                        type="button"
+                        className="header__search-btn"
+                        onClick={toggleSearch}
+                    >
+                        {isSearchOpen ? <CrossedIcon /> : <SearchIcon />}
+                    </button>
+
+
+
 
                     <Link to={"/account"} onMouseEnter={() => setIsOpen("account")}>
                         <AccountIcon />
                     </Link>
 
                     {isOpen === "account" && (
-                        <div 
+                        <div
                             className="header__mega-account"
                             onMouseEnter={() => setIsOpen("account")}
                             onMouseLeave={() => setIsOpen(null)}
                         >
                             <div className="header__categories-account">
-                                    {isAuth ? (
-                                        <div className="header__account-cont">
-                                            <span className="header__user-email">Your account:<br /> {email}</span>
-                                            <button className="header__logout" onClick={handleLogout}>
-                                                Log Out
-                                            </button>
-                                        </div>
-                                    ) : (
-                                        <>
-                                            <p className="header__user-email">Don't have account yet? <br /><span className="header__green">Let's start!</span></p>
+                                {isAuth ? (
+                                    <div className="header__account-cont">
+                                        <span className="header__user-email">Your account:<br /> {email}</span>
+                                        <button className="header__logout" onClick={handleLogout}>
+                                            Log Out
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <p className="header__user-email">Don't have account yet? <br /><span className="header__green">Let's start!</span></p>
 
-                                            <Link to={"/account"} className="header__mega-link2">
-                                                <AccountIcon />
-                                                Log In
-                                            </Link>
-                                            <Link to={"/account/register"} className="header__mega-link2">
-                                                Create Account
-                                            </Link>
-                                        </>
-                                    )}
+                                        <Link to={"/account"} className="header__mega-link2">
+                                            <AccountIcon />
+                                            Log In
+                                        </Link>
+                                        <Link to={"/account/register"} className="header__mega-link2">
+                                            Create Account
+                                        </Link>
+                                    </>
+                                )}
                             </div>
                         </div>
                     )}

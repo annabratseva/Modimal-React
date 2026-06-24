@@ -13,6 +13,7 @@ import LoginLayout from "../layouts/LoginLayout";
 import FavoritePage from "../pages/FavoritePage/FavoritePage";
 import ShopAll from "../pages/ShopAllPage/ShopAll";
 import MaterialsPage from "../pages/MaterialsPage/Materials";
+import SearchPage from "../features/search/SearchPage";
 
 export const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
             {
                 path: "shop-all",
                 element: <ShopAll />
+            },
+            {
+                path: "search",
+                element: <SearchPage />
             },
             {
                 path: "account",

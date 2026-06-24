@@ -72,9 +72,22 @@
         justify-content: center;
         align-items: center;
     }
+
+    .hero-block__container{
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 550px) {
+
+    .hero-block__title{
+        width: 250px;
+    }
+
+    .hero-block__container{
+        width: 270px;
+    }
+
     .hero-block{
         background-image: url("../../assets/images/homeScreenMobile.jpg");
     }

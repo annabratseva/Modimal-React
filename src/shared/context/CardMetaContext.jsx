@@ -6,12 +6,17 @@ const COLOR_SETS = [
     ["#000", "#7dc3eb", "#748C70"],
     ["#909225", "#19418e", "#000"],
     ["#d0a5ea", "#909225", "#748C70"],
+    ["#CA2929", "#000", "#909225"],
+    ["#d0a5ea", "#19418e"],
+    ["#000"],
+    ["#7dc3eb", "#d0a5ea"]
+
 ];
 
 const FALLBACK_IMAGES = [
     "/images/imageCloth1.png",
     "/images/imageCloth2.png",
-    "/images/imageCloth3.png",
+    "/images/imageCloth3.png"
 ];
 
 export const CardMetaProvider = ({ children }) => {
