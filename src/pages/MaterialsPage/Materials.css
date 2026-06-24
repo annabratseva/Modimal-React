@@ -92,3 +92,112 @@
 .materials__span{
     color: var(--primary);
 }
+
+@media screen and (max-width: 1350px) {
+    .materials__main-text{
+        width: 1000px;
+    }
+
+    .materials__card-cont{
+        width: 1000px;
+    }
+
+    .materials__cards{
+        gap: 32px;
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .materials{
+        padding: 160px 0 48px 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .materials__main-text{
+        width: 800px;
+    }
+
+    .materials__card-cont{
+        width: 600px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .materials__card-text{
+        width: 500px;
+    }
+
+    .materials__cards{
+        gap: 32px;
+        width: 800px;
+        height: auto;
+    }
+
+    .materials__pic, .materials__pic2, .materials__pic3, .materials__pic4{
+        width: 480px;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .materials__main-text, .materials__cards{
+        width: 600px;
+    }
+
+    .materials__pic, .materials__pic2, .materials__pic3, .materials__pic4{
+        width: 380px;
+        height: 300px;
+    }
+
+    .materials__card-cont, .materials__card-text{
+        width: 400px;
+    }
+      
+}
+
+
+@media screen and (max-width: 680px) {
+    .materials__main-text, .materials__cards{
+        width: 400px;
+    }
+
+    .materials__pic, .materials__pic2, .materials__pic3, .materials__pic4{
+        width: 380px;
+        height: 300px;
+    }
+
+    .materials__card-cont, .materials__card-text{
+        width: 400px;
+    }
+
+    .materials__main-text{
+        height: auto;
+    }
+      
+}
+
+@media screen and (max-width: 480px) {
+    .materials__main-text, .materials__cards{
+        width: 300px;
+    }
+
+    .materials__pic, .materials__pic2, .materials__pic3, .materials__pic4{
+        width: 280px;
+        height: 200px;
+    }
+
+    .materials__card-cont, .materials__card-text{
+        width: 280px;
+    }
+
+    .materials__main-text{
+        height: auto;
+    }
+
+    .materials__card-text{
+        height: auto;
+    }
+      
+}

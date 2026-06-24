@@ -203,3 +203,249 @@
 .sustain-page__subtitle--sized2{
     margin-top: 24px;
 }
+
+.sustain-page__people-mobile{
+    display: none;
+
+    width: 320px;
+    height: 649px;
+
+}
+
+@media screen and (max-width: 1350px) {
+    .sustain-page__white-title{
+        font-size: 30px;
+    }
+
+    .sustain-page__main-text, .sustain-page__inner-cards, 
+    .sustain-page__subtitle--sized, 
+    .sustain-page__cards, .sustain-page__img-cards, .sustain-page__img-first{
+        width: 1000px;
+    }
+
+    .sustain-page__subtitle{
+        font-size: 18px;
+    }
+
+    .sustain-page__title{
+        font-size: 30px;
+    }
+
+    .sustain-page__subtitle--smaller{
+        font-size: 15px;
+    }
+    
+    .sustain-page__title--card{
+        font-size: 20px;
+    }
+
+    .sustain-page__title--smaller{
+        font-size: 25px;
+    }
+
+    .sustain-page__card, .sustain-page__first-row{
+        width: 380px;
+    }
+
+    .sustain-page__cards{
+        gap: 24px;
+    }
+
+    .sustain-page__img-cont-small, .sustain-page__card-pic, .sustain-page__green-btn{
+        width: 500px;
+    }
+
+    .sustain-page__img-first{
+        height: 800px;
+    }
+
+    .sustain-page__img-cont-small{
+        height: 500px;
+    }
+
+    .sustain-page__img-cards{
+        height: 1600px;
+    }
+
+    .sustain-page__people, .sustain-page__people-title, .sustain-page__people-img{
+        width: 1000px;
+    }
+    
+
+}
+
+@media screen and (max-width: 1250px) {
+    .sustain-page{
+        padding: 160px 0 48px 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .sustain-page__main-text, .sustain-page__inner-cards, 
+    .sustain-page__subtitle--sized, 
+    .sustain-page__cards, .sustain-page__img-cards, .sustain-page__img-first{
+        width: 800px;
+    }
+
+    .sustain-page__people, .sustain-page__people-title, .sustain-page__people-img{
+        width: 800px;
+    }
+
+    .sustain-page__white-title{
+        font-size: 25px;
+    }
+
+    .sustain-page__img-cont-small, .sustain-page__card-pic, .sustain-page__green-btn{
+        width: 400px;
+    }
+
+    .sustain-page__img-cards{
+        height: 1380px;
+    }
+
+    .sustain-page__img-first , .sustain-page__img-cont-big{
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+
+    .sustain-page__main-text, .sustain-page__inner-cards, 
+    .sustain-page__subtitle--sized, 
+    .sustain-page__cards, .sustain-page__img-cards, .sustain-page__img-first{
+        width: 600px;
+    }
+
+    .sustain-page__people, .sustain-page__people-title, .sustain-page__people-img{
+        width: 600px;
+    }
+
+    .sustain-page__main-img{
+        height: 600px;
+    }
+
+    .sustain-page__white-title{
+        font-size: 20px;
+    }
+
+    .sustain-page__title{
+        font-size: 25px;
+    }
+
+    .sustain-page__subtitle{
+        font-size: 15px
+    }
+
+    .sustain-page__title--smaller{
+        font-size: 20px;
+    }
+    
+    .sustain-page__title--card{
+        font-size: 15px;
+    }
+
+    .sustain-page__subtitle--smaller{
+        font-size: 13px;
+    }
+
+    .sustain-page__inner-cards{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        height: auto;
+        gap: 32px;
+    }
+
+    .sustain-page__cards{
+        height: auto;
+    }
+
+    .sustain-page__first-row{
+        height: auto;
+    }
+
+    .sustain-page__img-first{
+        height: 460px
+    }
+
+    .sustain-page__img-cont-big, .sustain-page__img-cont-small{
+        height: 430px;
+        width: fit-content;
+    }
+
+    .sustain-page__img-cards{
+        height: auto;
+    }
+
+    .sustain-page__card-pic{
+        height: 350px;
+        width: 280px;
+    }
+
+    .sustain-page__green-btn{
+        width: 280px;
+    }
+
+
+}
+
+@media screen and (max-width: 680px) {
+    .sustain-page__main-img{
+        height: 480px;
+    }
+
+    .sustain-page__main-text, .sustain-page__inner-cards, 
+    .sustain-page__subtitle--sized, 
+    .sustain-page__cards, .sustain-page__img-cards, .sustain-page__img-first{
+        width: 400px;
+    }
+
+    .sustain-page__people, .sustain-page__people-title, .sustain-page__people-img{
+        width: 400px;
+    }
+
+    .sustain-page__people-img{
+        display: none;
+    }
+
+    .sustain-page__people-mobile{
+        display: flex;
+        width: 400px;
+        height: 740px;
+    }
+
+    .sustain-page__img-cards{
+        gap: 16px;
+    }
+    
+    .sustain-page__img-cards, .sustain-page__img-first{
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sustain-page__white-title{
+        font-size: 17px;
+    }
+
+    .sustain-page__main-img{
+        padding-bottom: 50px;
+    }
+
+    .sustain-page__main-text, .sustain-page__inner-cards, 
+    .sustain-page__subtitle--sized, 
+    .sustain-page__cards, .sustain-page__img-cards, .sustain-page__img-first{
+        width: 300px;
+    }
+
+    .sustain-page__people, .sustain-page__people-title, .sustain-page__people-img, .sustain-page__green-btn, .sustain-page__card-pic, .sustain-page__card, .sustain-page__first-row{
+        width: 300px;
+    }
+
+    .sustain-page__people-mobile{
+        
+        width: 300px;
+        height: 770px;
+    }
+}

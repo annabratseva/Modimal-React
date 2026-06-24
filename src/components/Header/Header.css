@@ -78,6 +78,12 @@
     flex-direction: column;
     gap: 8px;
     width: 184px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.header__logo:hover{
+    transform: scale(1.1);
 }
 
 .header__nav{

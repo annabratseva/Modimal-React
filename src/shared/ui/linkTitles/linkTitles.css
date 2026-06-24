@@ -26,3 +26,42 @@
 .green-text-link{
     color: var(--primary);
 }
+
+@media screen and (max-width: 1350px) {
+    .link-text__titles{
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .link-text__titles{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .link-text__titles{
+        width: 600px;
+    }
+
+    .link-text__subtitle{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .link-text__titles{
+        width: 400px;
+    }
+
+    .link-text__subtitle{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .link-text__titles{
+        width: 300px;
+    }   
+}

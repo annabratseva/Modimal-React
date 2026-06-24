@@ -9,6 +9,8 @@ import SustainPicCard4 from "../../assets/images/sustainPage5.jpg"
 import SustainLast from "../../assets/images/sustainPage6.jpg"
 import GreenSustain from "../../shared/ui/buttons/GreenSustain"
 
+import SustainMobileBanner from "../../assets/images/sustainMobileBanner.jpg"
+
 const SustainPage = () => {
     return (
         <section className="sustain-page">
@@ -90,6 +92,8 @@ const SustainPage = () => {
                 </div>
 
                 <img src={SustainLast} alt="sustain banner" className="sustain-page__people-img" />
+
+                <img src={SustainMobileBanner} alt="sustain mobile" className="sustain-page__people-mobile" />
 
                 <GreenSustain text={"Our Suppliers"} />
             </div>
