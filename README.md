@@ -20,3 +20,4 @@ Test here: https://annabratseva.github.io/Modimal-React/
 - GSAP
 - LocalStorage
 - Login/Registe system
+- Axios
